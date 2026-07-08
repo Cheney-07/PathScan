@@ -1,0 +1,14 @@
+[package]
+name = "pathscan"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "pathscan"
+path = "src/main.rs"
+
+[dependencies]
+pathscan-core = { path = "../pathscan-core" }
+pathscan-cli = { path = "../pathscan-cli" }
+pathscan-tui = { path = "../pathscan-tui" }
+tokio = { workspace = true }
