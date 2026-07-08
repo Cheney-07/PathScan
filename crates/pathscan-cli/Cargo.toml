@@ -1,0 +1,19 @@
+[package]
+name = "pathscan-cli"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "pathscan_cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pathscan-cli"
+path = "src/main.rs"
+
+[dependencies]
+pathscan-core = { path = "../pathscan-core" }
+tokio = { workspace = true }
+clap = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
