@@ -1,0 +1,18 @@
+[package]
+name = "pathscan-tui"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+name = "pathscan_tui"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pathscan-tui"
+path = "src/main.rs"
+
+[dependencies]
+pathscan-core = { path = "../pathscan-core" }
+tokio = { workspace = true }
+ratatui = { workspace = true }
+crossterm = { workspace = true }
