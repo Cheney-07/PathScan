@@ -1,0 +1,30 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/pathscan-core",
+    "crates/pathscan-cli",
+    "crates/pathscan-tui",
+    "crates/pathscan",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["rustls-tls", "cookies", "gzip"], default-features = false }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+clap = { version = "4", features = ["derive"] }
+ratatui = "0.29"
+crossterm = "0.28"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+url = "2"
+regex = "1"
+sha2 = "0.10"
+rand = "0.8"
+wiremock = "0.6"
